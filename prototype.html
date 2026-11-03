@@ -19,7 +19,7 @@ button{font:inherit;cursor:pointer}
 .sitehead{display:flex;align-items:center;gap:40px;padding:0 48px;height:72px;border-bottom:1px solid var(--rule)}
 .sitetitle{font-size:24px;font-weight:700;color:var(--navy);white-space:nowrap;text-decoration:none}
 nav.top{display:flex;gap:28px;font-size:15px}
-nav.top a{color:var(--ink);text-decoration:none;padding:24px 0 22px;border-bottom:3px solid transparent}
+nav.top a{white-space:nowrap;color:var(--ink);text-decoration:none;padding:24px 0 22px;border-bottom:3px solid transparent}
 nav.top a.on{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
 .band{background:#1F66B2;color:#fff;padding:32px 48px;display:flex;align-items:center;gap:32px}
 .band img{height:110px;display:block}
@@ -85,6 +85,26 @@ footer{background:#22364D;color:#fff;padding:16px 48px;font-size:13.5px;display:
 .btn.primary[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
 .btn.plain{background:#fff;border:1px solid var(--rule);color:var(--ink)}
 .small{font-size:12.5px;color:var(--muted)}
+/* requests */
+.st{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.st.done{background:var(--greenTint);color:var(--green)}.st.review{background:#FFF3DC;color:#7A4E00}.st.denied{background:#FBE9E9;color:#9B1C1C}
+.reqlink{font-weight:600;color:var(--blue);text-decoration:underline}
+.later-note{display:flex;gap:10px;align-items:center;background:#FAFBFC;border:1px dashed var(--rule);border-radius:6px;padding:10px 14px;margin:0 0 16px;font-size:13.5px;color:var(--muted)}
+.reqgrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{position:relative;padding:0 0 22px 40px}
+.tl li:before{content:"";position:absolute;left:13px;top:28px;bottom:0;width:2px;background:var(--rule)}
+.tl li:last-child:before{display:none}
+.tl .dot{position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:700;background:#EEF0F3;color:var(--gray);border:2px solid #C9D0DA}
+.tl li.done .dot{background:var(--green);border-color:var(--green);color:#fff}
+.tl li.now .dot{background:#fff;border-color:var(--blue);color:var(--blue)}
+.tl li.no .dot{background:#9B1C1C;border-color:#9B1C1C;color:#fff}
+.tl h3{margin:2px 0 2px;font-size:15.5px;color:var(--navy)}
+.tl li.wait h3{color:var(--gray)}
+.tl .who{font-size:13px;color:var(--muted)}
+.tl .nt{font-size:14px;margin-top:4px}
+.side dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:8px 10px;font-size:14px}.side dt{color:var(--muted)}.side dd{margin:0}
+@media (max-width:760px){.reqgrid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.drawer{transition:none}}
 @media (max-width:760px){
  .suite{gap:10px;padding:0 12px}.suite .brand,.suite .icons{display:none}
@@ -118,6 +138,7 @@ footer{background:#22364D;color:#fff;padding:16px 48px;font-size:13.5px;display:
   <nav class="top" aria-label="Site">
     <a href="#/home" data-nav="home">Home</a>
     <a href="#/all" data-nav="all">All forms</a>
+    <a href="#/requests" data-nav="requests">My requests</a>
     <a href="#/it" data-nav="it">Departments ▾</a>
     <a href="#/help" data-nav="help">Help</a>
   </nav>
@@ -160,6 +181,7 @@ var F=[
  {id:'IT-003',t:'Software Request',d:'Request installation or licensing of software.',c:2,f:'pdf',s:'Email to the IT Help Desk. Purchases may need budget approval.',r:'Sep 2026',k:'install license application program',tk:[1]},
  {id:'IT-008',t:'Software License Transfer',d:'Move a software license from one employee or device to another.',c:2,f:'pdf',s:'Get both supervisors’ signatures, then email to the IT Help Desk.',r:'Jun 2026',k:'license transfer reassign',tk:[1,2]},
  {id:'IT-010',t:'Acceptable Use Acknowledgment',d:'Confirm you have read the district technology use policy.',c:3,f:'online',s:'Complete and submit online. A confirmation is emailed to you.',r:'Oct 2026',k:'aup policy acceptable use acknowledgment onboarding',tk:[2,3]},
+ {id:'IT-012',t:'Acceptable Use Exception Request',d:'Ask for an exception to the technology use policy, such as a personal device on the staff network.',c:3,f:'online',s:'Complete and submit online. Your supervisor and Information Security review it, and you can track it in My requests.',r:'Oct 2026',k:'aup exception policy personal device byod network',tk:[3]},
  {id:'IT-011',t:'Remote Work Technology Agreement',d:'Agree to the technology terms for working off-site.',c:3,f:'pdf',s:'Sign, get supervisor signature, then email to the IT Help Desk.',r:'Aug 2026',k:'remote telework home vpn agreement',tk:[3]}
 ];
 var FMT={pdf:'<span class="pill pdf"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 2h8l4 4v16H6z M14 2v4h4"/></svg>Fillable PDF</span>',
@@ -168,6 +190,34 @@ var ICON={laptop:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" st
  people:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 19c0-3.3 2.7-5 6-5s6 1.7 6 5M15 14.5c3 0 6 1.3 6 4.5"/></svg>',
  chart:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 20V12M12 20V6M19 20V9M3 20h18"/></svg>',
  book:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z M12 6v14"/></svg>'};
+var R=[
+ {id:'REQ-1057',t:'Acceptable Use Exception Request',form:'IT-012',sub:'Oct 28, 2026',upd:'Oct 30, 2026',st:'review',lab:'In review',
+  sum:'Personal laptop on the staff Wi-Fi network for a grant-funded project through June 2027.',
+  steps:[
+   ['done','Submitted','You · Oct 28, 2026, 9:42 AM','Online form submitted with project justification and device details.'],
+   ['done','Supervisor approved','Your supervisor · Oct 29, 2026, 2:15 PM','Approved. Needed for the grant reporting work.'],
+   ['now','Information Security review','Assigned to Information Security · since Oct 30, 2026','Checking device requirements: current operating system, disk encryption, and endpoint protection.'],
+   ['wait','Decision','Pending',''],
+   ['wait','Fulfilled','Pending','Network access configured, if approved.'],
+   ['wait','Closed','Pending','']]},
+ {id:'REQ-1042',t:'Acceptable Use Acknowledgment',form:'IT-010',sub:'Oct 6, 2026',upd:'Oct 6, 2026',st:'done',lab:'Complete',
+  sum:'Annual acknowledgment of the district technology use policy, 2026–27.',
+  steps:[
+   ['done','Submitted','You · Oct 6, 2026, 8:57 AM','Policy version 2026.1 acknowledged online.'],
+   ['done','Recorded','Automatic · Oct 6, 2026, 8:57 AM','Acknowledgment saved to your record with the policy version and date.'],
+   ['done','Confirmation sent','Automatic · Oct 6, 2026, 8:58 AM','Confirmation emailed to you.'],
+   ['done','Closed','Automatic · Oct 6, 2026, 8:58 AM','Next acknowledgment due October 2027.']]},
+ {id:'REQ-0981',t:'Acceptable Use Exception Request',form:'IT-012',sub:'Sep 15, 2026',upd:'Sep 19, 2026',st:'denied',lab:'Denied',
+  sum:'Install a personal file-sync app on a district laptop.',
+  steps:[
+   ['done','Submitted','You · Sep 15, 2026, 11:20 AM','Online form submitted.'],
+   ['done','Supervisor approved','Your supervisor · Sep 16, 2026, 10:05 AM','Approved, pending security review.'],
+   ['done','Information Security review','Information Security · Sep 18, 2026','Reviewed against the data protection standard.'],
+   ['no','Denied','Information Security · Sep 19, 2026, 3:30 PM','Not approved: the app stores district files outside approved storage. Use OneDrive instead, which is already on your laptop.'],
+   ['done','Closed','Automatic · Sep 19, 2026, 3:31 PM','Decision emailed to you and your supervisor.']]}
+];
+var DOT={done:'✓',now:'•',wait:'',no:'✕'};
+var LATER='<div class="later-note"><span class="pill later-pill">Later phase</span><span>Concept of request tracking. Sample requests only; people, dates, and decisions are illustrative.</span></div>';
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 var view=document.getElementById('view'), q=document.getElementById('q');
 var state={fmt:'all',task:null,text:''};
@@ -215,6 +265,18 @@ var pages={
   var title=state.text?'Search results':(state.task!==null?TASKS[state.task]:'All forms A–Z');
   return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; All forms</div><h1>'+esc(title)+'</h1><p>'+(state.text?'Results for “'+esc(state.text)+'” across every department.':'Every published form across the district. During the pilot, IT forms only.')+'</p>')+
   '<main><div class="toolbar" role="group" aria-label="Filter by task">'+tchips+'</div><div class="toolbar" role="group" aria-label="Filter by format">'+chips()+'<span class="count">'+list.length+' of '+F.length+' forms</span></div>'+rows(list,false)+'</main>'},
+ requests:function(){
+  return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; My requests</div><h1>My requests</h1><p>Every request you submit, where it stands, and who has it.</p>')+
+  '<main>'+LATER+'<table><thead><tr><th style="width:40%">Request</th><th style="width:14%">Submitted</th><th style="width:14%">Status</th><th>Last update</th></tr></thead><tbody>'+
+  R.map(function(r){return '<tr class="row"><td><a class="reqlink" href="#/req?id='+r.id+'">'+esc(r.t)+'</a> <span class="fid">'+r.id+'</span><span class="fdesc">'+esc(r.sum)+'</span></td><td>'+r.sub+'</td><td><span class="st '+r.st+'">'+r.lab+'</span></td><td class="upd">'+r.upd+'</td></tr>'}).join('')+
+  '</tbody></table><p class="note">Each request keeps a full history: who acted, when, and why. That history is the record used for status reporting and audits.</p></main>'},
+ req:function(id){var r=R.filter(function(x){return x.id===id})[0]||R[0];
+  return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; <a href="#/requests">My requests</a> &nbsp;/&nbsp; '+r.id+'</div><h1>'+esc(r.t)+'</h1><p>'+esc(r.sum)+'</p>')+
+  '<main>'+LATER+'<div class="reqgrid"><div><h2>History</h2><ol class="tl">'+
+  r.steps.map(function(x){return '<li class="'+x[0]+'"><span class="dot" aria-hidden="true">'+DOT[x[0]]+'</span><h3>'+esc(x[1])+(x[0]==='now'?' <span class="st review">Current step</span>':'')+'</h3><div class="who">'+esc(x[2])+'</div>'+(x[3]?'<div class="nt">'+esc(x[3])+'</div>':'')+'</li>'}).join('')+
+  '</ol></div><aside class="card side"><h3 style="margin:0 0 10px;color:var(--navy);font-size:16px">Request details</h3><dl><dt>Request ID</dt><dd>'+r.id+'</dd><dt>Status</dt><dd><span class="st '+r.st+'">'+r.lab+'</span></dd><dt>Form</dt><dd>'+r.form+'</dd><dt>Submitted</dt><dd>'+r.sub+'</dd><dt>Last update</dt><dd>'+r.upd+'</dd><dt>Department</dt><dd>Information Technology</dd></dl>'+
+  '<p class="small" style="margin:14px 0 0">Questions about this request? <a href="#/help">Contact the IT Help Desk</a> and give the request ID.</p></aside></div>'+
+  '<p style="margin-top:6px"><a href="#/requests" style="font-weight:600">← Back to My requests</a></p></main>'},
  help:function(){return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; Help</div><h1>Help</h1><p>How to find, complete, and submit a form.</p>')+
   '<main><div class="three"><div class="card"><h3>Find a form</h3><ol><li>Type a word in the search box at the top, such as “laptop” or “access”.</li><li>Or pick a task on the home page.</li><li>Or browse by department.</li></ol></div>'+
   '<div class="card"><h3>'+FMT.pdf+'</h3><ol><li>Download the PDF.</li><li>Complete it and get signatures.</li><li>Submit it as the form row says.</li></ol></div>'+
@@ -230,11 +292,14 @@ function route(){
   else { state.task=null; state.fmt='all'; }
   if(page!=='all'&&page!=='it'){state.text='';q.value='';}
   if(page==='it'&&!p.has('q')){state.text='';q.value='';}
-  document.querySelectorAll('nav.top a').forEach(function(a){a.classList.toggle('on',a.dataset.nav===page);if(a.dataset.nav===page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+  var navPage=page==='req'?'requests':page;
+  document.querySelectorAll('nav.top a').forEach(function(a){a.classList.toggle('on',a.dataset.nav===navPage);if(a.dataset.nav===navPage)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+  reqId=p.get('id');
   render(page); window.scrollTo(0,0);
 }
 var cur='home';
-function render(page){cur=page;view.innerHTML=pages[page]();}
+var reqId=null;
+function render(page){cur=page;view.innerHTML=pages[page](reqId);}
 view.addEventListener('click',function(e){
   var b=e.target.closest('button');if(!b)return;
   if(b.dataset.fmt){state.fmt=b.dataset.fmt;render(cur);}
