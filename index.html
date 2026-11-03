@@ -32,6 +32,7 @@ section.panel:target { display:block !important; }
 body:has(#plan:target) nav.tabs a[href="#plan"], body:has(#pres:target) nav.tabs a[href="#pres"],
 body:has(#design:target) nav.tabs a[href="#design"], body:has(#guide:target) nav.tabs a[href="#guide"],
 body:has(#proto:target) nav.tabs a[href="#proto"],
+body:has(#status:target) nav.tabs a[href="#status"],
 body:has(#home:target) nav.tabs a[href="#home"] { color:#fff; border-bottom-color:var(--sky); background:rgba(255,255,255,.06); }
 
 main { max-width:960px; margin:0 auto; padding:26px 18px 60px; }
@@ -153,9 +154,10 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
 <nav class="tabs" id="tabs" aria-label="Sections">
   <a href="#home" class="active">Home</a>
   <a href="#proto">Prototype</a>
-  <a href="#design">Proposed Design</a>
+  <a href="#status">Decisions and Timeline</a>
   <a href="#pres">Presentation</a>
   <a href="#plan">The Plan</a>
+  <a href="#design">Proposed Design</a>
   <a href="#guide">Design and Build Guide</a>
 </nav>
 
@@ -210,11 +212,10 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
   </div>
 
   <div class="card primary">
-    <div class="num">Step 3 · What employees will see</div>
-    <h3 style="font-size:20px">Proposed Design</h3>
-    <p style="font-size:14.5px">Concepts for the district homepage and the IT forms landing page. Employees find a form by search, task, or department,
-    and every form shows its format and how to submit it. The full design is shown even though the pilot starts with IT.</p>
-    <a class="go" href="#design">See the proposed design</a>
+    <div class="num">Step 3 · What we need from you</div>
+    <h3 style="font-size:20px">Decisions and Timeline</h3>
+    <p style="font-size:14.5px">The decisions still open and who owns each one, three build options with hours, cost, and dates, notes for Security and Purchasing reviewers, and what has changed.</p>
+    <a class="go" href="#status">See decisions and timeline</a>
   </div>
 
   <div class="card">
@@ -233,20 +234,99 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
     <a class="go" href="#plan">Open the plan</a>
   </div>
 
-  <div class="card">
-    <div class="num">Reference · For the build team · 7 pages</div>
-    <h3>Design and Build Guide <span class="audience">IT</span></h3>
-    <p>Site structure, forms library columns and views, page-by-page web parts, search, content lifecycle, permissions, and dependencies.</p>
-    <a class="go" href="#guide">Open the guide</a>
+  <div class="card row">
+    <div>
+      <div class="num">Reference · Concept screens</div>
+      <h3>Proposed Design</h3>
+      <p>The homepage, IT forms page, and request tracking concepts, with what to look for in each.</p>
+    </div>
+    <a class="go" href="#design">See the designs</a>
   </div>
 
-  <div class="card row feedback">
+  <div class="card row">
     <div>
-      <h3>Questions or comments?</h3>
-      <p>Feedback shapes the detailed plan. Send thoughts, concerns, or forms you want included to Eric Crutchfield.</p>
+      <div class="num">Reference · For the build team · 7 pages</div>
+      <h3>Design and Build Guide <span class="audience">IT</span></h3>
+      <p>Site structure, forms library columns and views, page-by-page web parts, search, content lifecycle, permissions, and dependencies.</p>
     </div>
-    <a class="go" href="mailto:ecrutch1@wcccd.edu?subject=Forms%20Center%20feedback">Email Eric</a>
+    <a class="go" href="#guide">Open the guide</a>
   </div>
+</section>
+
+<section class="panel" id="status" aria-label="Decisions and Timeline">
+  <div class="doc">
+    <div class="dochead">
+      <h2>Decisions and Timeline</h2>
+    </div>
+    <div class="tip"><span class="tip-label">How to use this page</span>Start with <b>Decisions needed</b>. The build options below show what each choice means for time and cost.</div>
+    <p class="lede">What still needs a decision, who owns it, how long the build takes under each option, and what has changed in this package.</p>
+
+    <h3>Decisions needed</h3>
+    <div class="tablewrap"><table>
+    <thead><tr><th>Decision</th><th>Owner</th><th>Notes</th></tr></thead>
+    <tbody>
+    <tr><td><strong>Approve the direction and the IT pilot</strong></td><td>CIO</td><td>The decision requested in the Decision Brief.</td></tr>
+    <tr><td><strong>Choose a build option</strong></td><td>CIO</td><td>See Build options and timeline below.</td></tr>
+    <tr><td><strong>RFP intake: build the purchasing module or join MITN</strong></td><td>CIO and Purchasing</td><td>Laid out in the Purchasing Module brief.</td></tr>
+    <tr><td><strong>Name business owners</strong></td><td>CIO</td><td>Forms (IT), external intake (Purchasing), and request tracking.</td></tr>
+    <tr><td><strong>Guest access for vendors</strong></td><td>Information Security</td><td>Needed only if the purchasing module is built. Review can run in parallel with the IT pilot.</td></tr>
+    <tr><td><strong>Approvals in Teams or Outlook</strong></td><td>CIO</td><td>Proposed enhancement. Uses standard Power Automate approvals; licensing to confirm.</td></tr>
+    <tr><td><strong>Move this package to internal hosting</strong></td><td>CIO</td><td>This site is a temporary draft on a public page.</td></tr>
+    </tbody></table></div>
+
+    <h3>Build options and timeline</h3>
+    <div class="tablewrap"><table>
+    <thead><tr><th></th><th>1. Eric builds</th><th>2. Eric builds with consultant support</th><th>3. Consultant builds</th></tr></thead>
+    <tbody>
+    <tr><td><strong>Eric’s hours</strong></td><td>About 360</td><td>About 260</td><td>About 60</td></tr>
+    <tr><td><strong>Consultant hours</strong></td><td>None</td><td>50</td><td>165 to 200</td></tr>
+    <tr><td><strong>Outside cost</strong></td><td>$0</td><td>$7,500</td><td>$25,000 to $30,000</td></tr>
+    <tr><td><strong>IT pilot live</strong></td><td>Early March 2027</td><td>Late January 2027</td><td>Mid-December 2026</td></tr>
+    <tr><td><strong>Purchasing module ready</strong></td><td>Late May 2027</td><td>Late March 2027</td><td>Mid-February 2027</td></tr>
+    <tr><td><strong>District keeps the skills</strong></td><td>Fully</td><td>Fully</td><td>No</td></tr>
+    </tbody></table></div>
+    <div class="callout"><p class="label">ASSUMPTIONS</p>
+    <ul>
+    <li>Eric gives the project about 3 hours a day, Forms Center first, then the purchasing module.</li>
+    <li>Consultant support in Option 2 goes to design review, the sealed library and permission flows, the scoring screen, and a final security review.</li>
+    <li>The consultant works about 20 hours a week at $150 an hour.</li>
+    <li>Allows for Thanksgiving, the winter break, and MLK Day.</li>
+    <li>If Purchasing chooses MITN, the purchasing module is replaced by about 3 to 4 weeks of onboarding.</li>
+    </ul>
+    <p><strong>What sets the pace:</strong> approvals, the Information Security review, finding pilot testers, and Purchasing’s schedule. Extra hours don’t shorten these.</p></div>
+
+    <h3>Notes for reviewers</h3>
+    <div class="callout"><p class="label">INFORMATION SECURITY</p>
+    <ul>
+    <li>Vendors would sign in as guests with a one-time emailed code; no passwords or licenses.</li>
+    <li>Submitted bids would sit in a library locked to a service account until the deadline; every access is logged.</li>
+    <li>The deadline-day fallback upload link would be limited to one folder and set to expire.</li>
+    <li>The IT pilot uses internal access only and contains no student data.</li>
+    </ul>
+    <p>Details: the Purchasing Module brief and the tools table in The Plan.</p></div>
+    <div class="callout"><p class="label">PURCHASING</p>
+    <ul>
+    <li>Decisions that belong to Purchasing: electronic submission and late-bid policy, the opening procedure, the registration cutoff, and records retention.</li>
+    <li>The purchasing module and MITN are both on the table.</li>
+    <li>Requisitions, POs, and payment stay in Banner either way.</li>
+    </ul>
+    <p>Details: the Purchasing Module brief, downloadable from Home.</p></div>
+
+    <h3>Assumed in this proposal</h3>
+    <ul>
+    <li>SharePoint is the foundation, with standard Microsoft 365 tools.</li>
+    <li>IT is the pilot department; HR, Institutional Effectiveness, and Academic Affairs follow.</li>
+    <li>Existing PDF forms are converted to fillable PDFs.</li>
+    <li>The pilot workflow is the acceptable use request: routing, approvals, and closure.</li>
+    </ul>
+
+    <h3>What changed</h3>
+    <ul>
+    <li><strong>November 3, 2026:</strong> Added the Decision Brief, the Purchasing Module brief, this page, the guided prototype tour with phase labels, and the request tracking concept. Updated the plan for fillable PDF conversion and the MITN option.</li>
+    <li><strong>October 27, 2026:</strong> First draft of the briefing package.</li>
+    </ul>
+  </div>
+  <p class="nextlink"><a href="#pres">Next: Presentation →</a></p>
 </section>
 
 <section class="panel" id="plan" aria-label="The Plan">
@@ -259,7 +339,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
       </span>
     </div>
     <div class="tip"><span class="tip-label">How to use this page</span>Short on time? Read <b>Requirements</b> and <b>Implementation approach</b> first. The rest is supporting detail.</div>
-    <p class="lede">Prepared for Yoseph Demissie, Chief Information Officer · Prepared by Eric Crutchfield · October 27, 2026 · Proposed approach for discussion</p>
+    <p class="lede">Prepared for Yoseph Demissie, Chief Information Officer · Prepared by Eric Crutchfield · Updated November 3, 2026 · Proposed approach for discussion</p>
     <h3 id="purpose-and-direction">Purpose and direction</h3>
 <p>Establish a reusable enterprise framework for internal forms, secure
 external file submissions, and request tracking, using SharePoint as the
@@ -513,7 +593,7 @@ pilot.</li>
 schedule.</p>
 
   </div>
-  <p class="nextlink"><a href="#guide">Next: Design and Build Guide →</a></p>
+  <p class="nextlink"><a href="#design">Next: Proposed Design →</a></p>
 </section>
 
 <section class="panel" id="pres" aria-label="Presentation">
@@ -586,7 +666,7 @@ schedule.</p>
     </figure>
     <p class="illus">Concepts only. Form names, IDs, formats, submission steps, people, and dates are illustrative.</p>
   </div>
-  <p class="nextlink"><a href="#pres">Next: Presentation →</a></p>
+  <p class="nextlink"><a href="#guide">Next: Design and Build Guide →</a></p>
 </section>
 
 <section class="panel" id="proto" aria-label="Prototype">
@@ -608,7 +688,7 @@ schedule.</p>
     <div class="demo-wrap"><iframe id="protoFrame" src="prototype.html#/tour" title="WCCCD Forms Center prototype" loading="lazy"></iframe></div>
     <p class="illus" style="margin-top:10px">The live portal would be built in SharePoint as described in the Design and Build Guide. The prototype shows the experience, not the build.</p>
   </div>
-  <p class="nextlink"><a href="#design">Next: Proposed Design →</a></p>
+  <p class="nextlink"><a href="#status">Next: Decisions and Timeline →</a></p>
 </section>
 
 <section class="panel" id="guide" aria-label="Design and Build Guide">
@@ -1118,8 +1198,8 @@ Daily)</a></li>
 
 </main>
 
-<footer>WCCCD Forms Center Briefing Package · DRAFT · Updated November 3, 2026 · Feedback: <a href="mailto:ecrutch1@wcccd.edu?subject=Forms%20Center%20feedback">ecrutch1@wcccd.edu</a> · Proposed approach for discussion · Contains no student or employee data ·
-Mockup content is illustrative · Documents downloadable above in Word format</footer>
+<footer>WCCCD Forms Center Briefing Package · DRAFT · Updated November 3, 2026 · Proposed approach for discussion · Contains no student or employee data ·
+Mockup content is illustrative · Documents downloadable in Word and PDF</footer>
 
 <div id="ss-overlay" role="dialog" aria-modal="true" aria-label="Full-screen viewer">
   <img id="ss-img" src="" alt="">
