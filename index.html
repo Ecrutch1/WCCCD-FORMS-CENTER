@@ -156,7 +156,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
 
   <div class="card row">
     <div>
-      <div class="num">Start here · 1 page</div>
+      <div class="num">Step 1 · Start here · 1 page</div>
       <h3>Decision Brief <span class="audience">Leadership</span></h3>
       <p>The proposal on one page: the problem, what it delivers, the four phases, risks, and the decision requested.</p>
     </div>
@@ -166,20 +166,11 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
     </span>
   </div>
 
-  <div class="card row">
-    <div>
-      <div class="num">Step 1 · Read first · 4 pages</div>
-      <h3>The Plan <span class="audience">Leadership and IT</span></h3>
-      <p>The three requirements, required RFP controls, four implementation phases, proposed tools, and next steps.</p>
-    </div>
-    <a class="go" href="#plan">Open the plan</a>
-  </div>
-
-  <div class="card">
-    <div class="num">Step 2 · At a glance · 8 slides</div>
-    <h3>Presentation</h3>
-    <p>A short visual walk-through of the plan and the proposed portal. View the slides here or download the deck.</p>
-    <a class="go" href="#pres">View the presentation</a>
+  <div class="card" style="border-color:var(--blue)">
+    <div class="num">Step 2 · Try it · clickable prototype</div>
+    <h3>Prototype</h3>
+    <p>Search for a form, pick a task, browse the IT page, and open a form to see how to submit it. Sample forms only; nothing is submitted.</p>
+    <a class="go" href="#proto" style="background:var(--blue)">Try the prototype</a>
   </div>
 
   <div class="card primary">
@@ -190,15 +181,24 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
     <a class="go" href="#design">See the proposed design</a>
   </div>
 
-  <div class="card" style="border-color:var(--blue)">
-    <div class="num">Step 4 · Try it · clickable prototype</div>
-    <h3>Prototype</h3>
-    <p>Search for a form, pick a task, browse the IT page, and open a form to see how to submit it. Sample forms only; nothing is submitted.</p>
-    <a class="go" href="#proto" style="background:var(--blue)">Try the prototype</a>
+  <div class="card">
+    <div class="num">Step 4 · At a glance · 8 slides</div>
+    <h3>Presentation</h3>
+    <p>A short visual walk-through of the plan and the proposed portal. View the slides here or download the deck.</p>
+    <a class="go" href="#pres">View the presentation</a>
+  </div>
+
+  <div class="card row">
+    <div>
+      <div class="num">Reference · 4 pages</div>
+      <h3>The Plan <span class="audience">Leadership and IT</span></h3>
+      <p>The full detail: three requirements, required RFP controls, four implementation phases, proposed tools, and next steps.</p>
+    </div>
+    <a class="go" href="#plan">Open the plan</a>
   </div>
 
   <div class="card">
-    <div class="num">Step 5 · For the build team · 7 pages</div>
+    <div class="num">Reference · For the build team · 7 pages</div>
     <h3>Design and Build Guide <span class="audience">IT</span></h3>
     <p>Site structure, forms library columns and views, page-by-page web parts, search, content lifecycle, permissions, and dependencies.</p>
     <a class="go" href="#guide">Open the guide</a>
@@ -235,8 +235,8 @@ budget, or date.</p></div>
 <p><strong>Internal forms portal</strong></p>
 <p>Create a central SharePoint entry point where employees can find,
 access, complete, and submit departmental forms. Begin by inventorying
-IT’s existing shared folder of fillable PDFs and organizing approved
-forms by department and purpose.</p>
+IT’s existing shared folder of PDFs, converting them to fillable PDFs,
+and organizing approved forms by department and purpose.</p>
 <p>Retain PDFs where appropriate and identify opportunities for online
 forms that support routing and structured tracking. Confirm how each
 form will be completed and submitted before migration.</p>
@@ -309,7 +309,7 @@ settings.</li>
 <p><strong>Build and evaluate the IT pilot</strong></p></td>
 <td><ul>
 <li>Create the enterprise structure and the IT forms area.</li>
-<li>Migrate the initial approved forms.</li>
+<li>Convert the initial approved forms to fillable PDFs and load them into the library.</li>
 <li>Implement one request process with routing, decision capture,
 status tracking, and closure.</li>
 <li>Test with a small employee group and refine before broader
@@ -318,8 +318,11 @@ use.</li>
 </tr>
 <tr class="odd">
 <td><p class="label">PHASE 3</p>
-<p><strong>Validate external intake</strong></p></td>
+<p><strong>Purchasing module and external intake</strong></p></td>
 <td><ul>
+<li>Choose the RFP intake path with Purchasing: build the purchasing
+module in the Forms Center, or join MITN, Michigan’s public bid
+network.</li>
 <li>Pilot general secure file collection and a controlled RFP
 scenario with the responsible department.</li>
 <li>Test vendor verification, deadline enforcement and
@@ -377,8 +380,8 @@ every submission and access path.</td>
 <tr class="odd">
 <td><strong>Forms and application interfaces</strong></td>
 <td>Structured data entry and guided submissions: Microsoft Forms or
-Power Apps for suitable internal processes; an authenticated external
-interface such as Power Pages where vendor requirements warrant it.</td>
+Power Apps for suitable internal processes; vendor guest sign-in
+through Microsoft Entra for RFP submissions.</td>
 <td>External file upload support and licensing.</td>
 </tr>
 <tr class="even">
@@ -403,9 +406,10 @@ requirements.</td>
 Power Automate alone satisfy the complete RFP process. Validate identity
 assurance, deadline enforcement, receipt delivery, and protection of bid
 contents, including from administrators.</p>
-<p>If Microsoft 365 components cannot meet the required controls,
-evaluate a dedicated procurement submission platform and its integration
-with the enterprise framework.</p></div>
+<p>Joining MITN, Michigan’s no-cost public bid network, is a simpler
+alternative for RFP intake. If Microsoft 365 components cannot meet the
+required controls and MITN does not fit, evaluate a hosted procurement
+platform.</p></div>
 <h3 id="governance-and-ownership">Governance and ownership</h3>
 <ul>
 <li>Assign departmental content and process owners and technical
