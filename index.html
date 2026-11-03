@@ -44,6 +44,16 @@ section.panel.active { display:block; animation:fade .25s ease; }
 .hero { display:flex; gap:28px; align-items:center; }
 .hero-logo { height:112px; width:auto; flex:none; padding-right:28px; border-right:1px solid rgba(255,255,255,.45); }
 @media (max-width:640px) { .hero { flex-direction:column; align-items:flex-start; gap:16px; } .hero-logo { height:72px; padding-right:0; border-right:0; } }
+.hero-meta { margin-top:16px; padding-top:14px; border-top:1px solid rgba(255,255,255,.35); font-size:14px; display:grid; gap:4px; }
+.hero-meta a { color:#fff; font-weight:600; }
+.try { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0 0 12px; }
+.try-label { font-size:13px; font-weight:700; color:var(--navy); margin-right:2px; }
+.try button { font:inherit; font-size:13px; font-weight:600; color:var(--navy); background:var(--tint); border:1px solid var(--line); border-radius:20px; padding:6px 12px; cursor:pointer; }
+.try button:hover, .try button[aria-pressed="true"] { background:var(--navy); color:#fff; border-color:var(--navy); }
+.nextlink { text-align:right; margin:14px 4px 0; font-size:14.5px; }
+.nextlink a { font-weight:700; text-decoration:none; }
+.nextlink a:hover { text-decoration:underline; }
+.card.feedback { background:var(--tint); border-style:dashed; }
 .hero .kicker { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#d9e8fa; font-weight:700; margin-bottom:8px; }
 .hero h2 { font-size:28px; margin-bottom:10px; line-height:1.2; }
 .hero p { font-size:15.5px; max-width:66ch; }
@@ -157,6 +167,10 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
     a controlled process for files from vendors and other outside parties, including RFP bids; and a traceable record of every request from
     submission to closure. SharePoint is the proposed foundation, and IT is the pilot.</p>
     <span class="rule">Find the right form. Know how to submit it. Trace every request.</span>
+    <div class="hero-meta">
+      <div><b>The ask:</b> approve the direction and the IT pilot.</div>
+      <div><b>Short on time?</b> Read the <a href="WCCCD_Forms_Center_Decision_Brief.pdf" download>Decision Brief</a>, then <a href="#proto">try the prototype</a>. About 10 minutes.</div>
+    </div>
     </div>
   </div>
 
@@ -208,6 +222,14 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
     <h3>Design and Build Guide <span class="audience">IT</span></h3>
     <p>Site structure, forms library columns and views, page-by-page web parts, search, content lifecycle, permissions, and dependencies.</p>
     <a class="go" href="#guide">Open the guide</a>
+  </div>
+
+  <div class="card row feedback">
+    <div>
+      <h3>Questions or comments?</h3>
+      <p>Feedback shapes the detailed plan. Send thoughts, concerns, or forms you want included to Eric Crutchfield.</p>
+    </div>
+    <a class="go" href="mailto:ecrutch1@wcccd.edu?subject=Forms%20Center%20feedback">Email Eric</a>
   </div>
 </section>
 
@@ -474,6 +496,7 @@ pilot.</li>
 schedule.</p>
 
   </div>
+  <p class="nextlink"><a href="#guide">Next: Design and Build Guide →</a></p>
 </section>
 
 <section class="panel" id="pres" aria-label="Presentation">
@@ -497,6 +520,7 @@ schedule.</p>
 <img src="pres-07.jpg" alt="Slide 7 of the Forms Center presentation" loading="lazy" class="slide">
 <img src="pres-08.jpg" alt="Slide 8 of the Forms Center presentation" loading="lazy" class="slide">
   </div>
+  <p class="nextlink"><a href="#plan">Next: The Plan →</a></p>
 </section>
 
 <section class="panel" id="design" aria-label="Proposed Design">
@@ -543,6 +567,7 @@ schedule.</p>
     </figure>
     <p class="illus">Concepts only. Form names, IDs, formats, submission steps, people, and dates are illustrative.</p>
   </div>
+  <p class="nextlink"><a href="#pres">Next: Presentation →</a></p>
 </section>
 
 <section class="panel" id="proto" aria-label="Prototype">
@@ -551,12 +576,18 @@ schedule.</p>
       <h2>Prototype</h2>
       <span><a class="dl play" href="prototype.html" target="_blank" rel="noopener">⛶ Open full screen</a></span>
     </div>
-    <p class="lede">A clickable version of the proposed design. Try typing “laptop” or “access” in the search box, choose a task on the home page,
-    or open the IT page and select a form. Open <strong>My requests</strong> to see how an acceptable use request is tracked from submission to closure. The prototype uses eleven sample IT forms and three sample requests; names, IDs, steps, and dates are illustrative, and nothing is submitted.
-    If the preview below doesn’t load on your network, use Open full screen.</p>
-    <div class="demo-wrap"><iframe src="prototype.html" title="WCCCD Forms Center prototype" loading="lazy"></iframe></div>
+    <p class="lede">A clickable version of the proposed design. Pick a task below, or explore on your own: search, browse the IT page, open a form, or check My requests. Eleven sample forms and three sample requests; nothing is submitted. If the preview doesn’t load on your network, use Open full screen.</p>
+    <div class="try" role="group" aria-label="Guided tasks">
+      <span class="try-label">Try these:</span>
+      <button type="button" data-try="all?q=laptop">Find the laptop request</button>
+      <button type="button" data-try="it">Browse the IT forms page</button>
+      <button type="button" data-try="req?id=REQ-1057">Check an AUP exception in review</button>
+      <button type="button" data-try="req?id=REQ-0981">See a denied request and why</button>
+    </div>
+    <div class="demo-wrap"><iframe id="protoFrame" src="prototype.html" title="WCCCD Forms Center prototype" loading="lazy"></iframe></div>
     <p class="illus" style="margin-top:10px">The live portal would be built in SharePoint as described in the Design and Build Guide. The prototype shows the experience, not the build.</p>
   </div>
+  <p class="nextlink"><a href="#design">Next: Proposed Design →</a></p>
 </section>
 
 <section class="panel" id="guide" aria-label="Design and Build Guide">
@@ -1060,11 +1091,12 @@ Daily)</a></li>
 </ul>
 
   </div>
+  <p class="nextlink"><a href="#home">← Back to Home</a></p>
 </section>
 
 </main>
 
-<footer>WCCCD Forms Center Briefing Package · DRAFT · Updated November 3, 2026 · Proposed approach for discussion · Contains no student or employee data ·
+<footer>WCCCD Forms Center Briefing Package · DRAFT · Updated November 3, 2026 · Feedback: <a href="mailto:ecrutch1@wcccd.edu?subject=Forms%20Center%20feedback">ecrutch1@wcccd.edu</a> · Proposed approach for discussion · Contains no student or employee data ·
 Mockup content is illustrative · Documents downloadable above in Word format</footer>
 
 <div id="ss-overlay" role="dialog" aria-modal="true" aria-label="Full-screen viewer">
@@ -1128,6 +1160,15 @@ Mockup content is illustrative · Documents downloadable above in Word format</f
     else if (e.key === 'Escape') close();
   });
 })();
+</script>
+<script>
+document.querySelectorAll('.try button').forEach(function(b){b.addEventListener('click',function(){
+  var f=document.getElementById('protoFrame');
+  document.querySelectorAll('.try button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+  b.setAttribute('aria-pressed','true');
+  f.src='prototype.html#/'+b.getAttribute('data-try');
+  f.scrollIntoView({behavior:'smooth',block:'center'});
+});});
 </script>
 </body>
 </html>

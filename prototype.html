@@ -283,8 +283,9 @@ var pages={
   '<div class="card"><h3>'+FMT.online+'</h3><ol><li>Open the form in your browser.</li><li>Complete and submit it.</li><li>Keep the confirmation email.</li></ol></div></div>'+
   '<div class="help"><div><b>IT Help Desk</b><br><span style="color:var(--muted);font-size:14px">Contact details are confirmed before launch.</span></div></div></main>'}
 };
-var curHash='home';
-function go(h){curHash=h;route();}
+var curHash=location.hash.replace(/^#\/?/,'')||'home';
+window.addEventListener('hashchange',function(){curHash=location.hash.replace(/^#\/?/,'')||'home';route();});
+function go(h){curHash=h;try{history.replaceState(null,'','#/'+h);}catch(e){}route();}
 function route(){
   var h=curHash||'home', parts=h.split('?'), page=pages[parts[0]]?parts[0]:'home';
   var p=new URLSearchParams(parts[1]||'');
