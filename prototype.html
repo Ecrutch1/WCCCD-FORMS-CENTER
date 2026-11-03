@@ -105,6 +105,64 @@ footer{background:#22364D;color:#fff;padding:16px 48px;font-size:13.5px;display:
 .tl .nt{font-size:14px;margin-top:4px}
 .side dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:8px 10px;font-size:14px}.side dt{color:var(--muted)}.side dd{margin:0}
 @media (max-width:760px){.reqgrid{grid-template-columns:1fr}}
+/* roles, submit, teams, dashboard */
+.rolesel{display:flex;align-items:center;gap:6px;font-size:12.5px;color:#cfd8e6;flex:none}
+.rolesel select{font:inherit;font-size:13px;font-weight:600;border:0;border-radius:4px;padding:5px 8px;background:#fff;color:var(--navy);cursor:pointer}
+.ribbon a{color:#6B4A00;font-weight:600}
+.frm{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.fld{margin:0 0 14px}.fld label{display:block;font-weight:600;font-size:14px;margin:0 0 5px;color:var(--navy)}
+.fld .hint{font-size:12.5px;color:var(--muted);margin:3px 0 0}
+.fld input,.fld select,.fld textarea{width:100%;font:inherit;font-size:14px;border:1px solid #B9C3D3;border-radius:4px;padding:8px 10px;background:#fff;color:var(--ink)}
+.fld input[readonly]{background:#F3F5F8;color:var(--muted)}
+.fld textarea{min-height:76px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:3px solid #7FB0E8;outline-offset:0;border-color:var(--blue)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.flow{list-style:none;margin:8px 0 0;padding:0;font-size:14px}.flow li{display:flex;gap:10px;margin:0 0 10px}.flow b{flex:none;width:22px;height:22px;border-radius:50%;background:var(--tint);color:var(--blue);display:grid;place-items:center;font-size:12px}
+.okbox{text-align:center;padding:30px 20px 10px}
+.okbox .big{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:32px;margin:0 auto 14px}
+.okbox h2{margin:0 0 6px}.okbox .rid{font-size:20px;font-weight:700;color:var(--navy);letter-spacing:.02em}
+.next3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 6px}
+.next3 .card h3{margin:0 0 6px;font-size:15px;color:var(--navy)}.next3 .card p{margin:0 0 10px;font-size:13.5px;color:var(--muted)}
+.teams{border:1px solid #D1D1DB;border-radius:8px;overflow:hidden;background:#F5F5F5;max-width:620px;margin:0 0 18px}
+.teams .bar{background:#5B5FC7;color:#fff;display:flex;align-items:center;gap:10px;padding:8px 14px;font-size:13.5px;font-weight:600}
+.teams .bar .tlogo{width:22px;height:22px;border-radius:4px;background:#fff;color:#5B5FC7;display:grid;place-items:center;font-weight:800;font-size:13px}
+.teams .bar .tm{margin-left:auto;font-weight:400;opacity:.85;font-size:12.5px}
+.teams .msg{display:flex;gap:10px;padding:14px}
+.teams .app{width:32px;height:32px;border-radius:6px;background:#E8EBFA;color:#5B5FC7;display:grid;place-items:center;flex:none}
+.teams .who{font-size:13px;color:#424242;margin:0 0 6px}.teams .who b{color:#242424}
+.acard{background:#fff;border:1px solid #E0E0E0;border-radius:6px;padding:14px 16px;flex:1;min-width:0}
+.acard h3{margin:0 0 4px;font-size:15.5px;color:#242424}.acard .sub2{font-size:13px;color:#616161;margin:0 0 10px}
+.acard dl{display:grid;grid-template-columns:110px 1fr;gap:6px 10px;margin:0 0 12px;font-size:13.5px}.acard dt{color:#616161}.acard dd{margin:0}
+.acard textarea{width:100%;font:inherit;font-size:13.5px;border:1px solid #D1D1D1;border-radius:4px;padding:7px 9px;min-height:44px;margin:0 0 10px}
+.tbtn{font:inherit;font-size:13.5px;font-weight:600;border-radius:4px;padding:7px 16px;border:1px solid #D1D1D1;background:#fff;color:#242424}
+.tbtn.go{background:#5B5FC7;border-color:#5B5FC7;color:#fff}
+.tbtn:hover{filter:brightness(.95)}
+.acard .done{font-size:13.5px;font-weight:600;padding:8px 10px;border-radius:4px}
+.acard .done.ok{background:var(--greenTint);color:var(--green)}.acard .done.no{background:#FBE9E9;color:#9B1C1C}
+.cap{font-size:12.5px;color:var(--muted);margin:-8px 0 18px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 22px}
+.tile{border:1px solid var(--rule);border-radius:6px;padding:14px 16px;background:#fff}
+.tile .n{font-size:30px;font-weight:700;color:var(--navy);line-height:1.1}.tile .l{font-size:13px;color:var(--muted)}
+.tile.hot{border-color:var(--blue);background:#F4F8FD}
+.bars{margin:0 0 22px}.bars .r{display:grid;grid-template-columns:220px 1fr 34px;gap:10px;align-items:center;font-size:13.5px;margin:0 0 7px}
+.bars .t{height:14px;background:var(--tint);border-radius:3px;overflow:hidden}.bars .t i{display:block;height:100%;background:var(--blue);border-radius:3px}
+.dash2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.empty2{padding:22px;border:1px dashed var(--rule);border-radius:6px;color:var(--muted);font-size:14px;background:#FAFBFC;margin:0 0 18px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:#1B2330;color:#fff;padding:11px 18px;border-radius:6px;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.25);opacity:0;transition:all .25s ease;z-index:40;max-width:92%;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.newrow td{background:#F4F8FD}
+@media (max-width:760px){.frm,.two,.next3,.dash2{grid-template-columns:1fr}.tiles{grid-template-columns:1fr 1fr}.bars .r{grid-template-columns:120px 1fr 28px}.rolesel span{display:none}.acard dl{grid-template-columns:90px 1fr}}
+.tourbar{background:var(--navy);color:#fff;padding:14px 48px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.tourbar .k{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9CC3F0;flex:none}
+.tourbar .tx{flex:1;min-width:220px;font-size:15px}
+.tourbar .prog{display:flex;gap:4px;flex:none}.tourbar .prog i{width:18px;height:4px;border-radius:2px;background:rgba(255,255,255,.3)}.tourbar .prog i.on{background:#9CC3F0}
+.tourbar button{font:inherit;font-size:14px;font-weight:700;border-radius:4px;padding:8px 16px;border:0;cursor:pointer}
+.tourbar .nx{background:#fff;color:var(--navy)}.tourbar .ex{background:transparent;color:#cfd8e6;border:1px solid rgba(255,255,255,.4)}
+.pulse{outline:3px solid #F2B705;outline-offset:4px;border-radius:6px;animation:pl 1.4s ease-in-out infinite}
+@keyframes pl{50%{outline-color:rgba(242,183,5,.25)}}
+.tourcta{display:inline-flex;align-items:center;gap:8px;background:#F2B705;color:#1B2330;font-weight:700;padding:10px 18px;border-radius:4px;text-decoration:none}
+@media (max-width:760px){.tourbar{padding:12px 16px;gap:8px 10px}.tourbar .k,.tourbar .tx{flex-basis:100%}.tourbar .prog{display:none}.tourbar button{padding:8px 14px}}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}}
 @media (prefers-reduced-motion:reduce){.drawer{transition:none}}
 @media (max-width:760px){
  .suite{gap:10px;padding:0 12px}.suite .brand,.suite .icons{display:none}
@@ -122,7 +180,7 @@ footer{background:#22364D;color:#fff;padding:16px 48px;font-size:13.5px;display:
 }
 </style></head>
 <body>
-<div class="ribbon">Concept prototype. Sample forms only: names, IDs, steps, and dates are illustrative. Nothing here is submitted.</div>
+<div class="ribbon">Concept prototype. Sample data only: names, IDs, and dates are illustrative. Nothing leaves this page. <a href="#" id="resetDemo">Reset demo</a></div>
 <div class="suite">
   <div class="waffle" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <span class="brand">SharePoint</span>
@@ -131,7 +189,8 @@ footer{background:#22364D;color:#fff;padding:16px 48px;font-size:13.5px;display:
     <input id="q" type="search" placeholder="Search Forms Center" aria-label="Search Forms Center" autocomplete="off">
   </form>
   <span class="icons" aria-hidden="true">⚙&nbsp;&nbsp;?</span>
-  <span class="avatar" aria-hidden="true">EC</span>
+  <label class="rolesel"><span>Viewing as</span><select id="role" aria-label="Viewing as"><option value="emp">Employee</option><option value="sup">Supervisor</option><option value="it">IT staff</option></select></label>
+  <span class="avatar" id="avatar" aria-hidden="true">EC</span>
 </div>
 <div class="sitehead">
   <a class="sitetitle" href="#/home">WCCCD Forms Center</a>
@@ -139,11 +198,14 @@ footer{background:#22364D;color:#fff;padding:16px 48px;font-size:13.5px;display:
     <a href="#/home" data-nav="home">Home</a>
     <a href="#/all" data-nav="all">All forms</a>
     <a href="#/requests" data-nav="requests">My requests</a>
+    <a href="#/approvals" data-nav="approvals" data-roles="sup it" hidden>Approvals</a>
+    <a href="#/dashboard" data-nav="dashboard" data-roles="it" hidden>Dashboard</a>
     <a href="#/it" data-nav="it">Departments ▾</a>
     <a href="#/help" data-nav="help">Help</a>
   </nav>
 </div>
 <div id="view"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <footer><b>Wayne County Community College District</b><span>Forms Center owner: District IT · Content owned by each department</span></footer>
 
 <div class="scrim" id="scrim"></div>
@@ -190,16 +252,10 @@ var ICON={laptop:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" st
  people:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 19c0-3.3 2.7-5 6-5s6 1.7 6 5M15 14.5c3 0 6 1.3 6 4.5"/></svg>',
  chart:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 20V12M12 20V6M19 20V9M3 20h18"/></svg>',
  book:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z M12 6v14"/></svg>'};
-var R=[
- {id:'REQ-1057',t:'Acceptable Use Exception Request',form:'IT-012',sub:'Oct 28, 2026',upd:'Oct 30, 2026',st:'review',lab:'In review',
-  sum:'Personal laptop on the staff Wi-Fi network for a grant-funded project through June 2027.',
-  steps:[
-   ['done','Submitted','You · Oct 28, 2026, 9:42 AM','Online form submitted with project justification and device details.'],
-   ['done','Supervisor approved','Your supervisor · Oct 29, 2026, 2:15 PM','Approved. Needed for the grant reporting work.'],
-   ['now','Information Security review','Assigned to Information Security · since Oct 30, 2026','Checking device requirements: current operating system, disk encryption, and endpoint protection.'],
-   ['wait','Decision','Pending',''],
-   ['wait','Fulfilled','Pending','Network access configured, if approved.'],
-   ['wait','Closed','Pending','']]},
+var R0=[
+ {id:'REQ-1057',t:'Acceptable Use Exception Request',form:'IT-012',sub:'Oct 28, 2026',sum:'Personal laptop on the staff Wi-Fi network for a grant-funded project through June 2027.',
+  type:'Personal device on the staff network',reason:'Grant reporting software is licensed to my personal laptop.',
+  ev:{sub:{at:'Oct 28, 2026, 9:42 AM',note:'Online form submitted with project justification and device details.'},sup:{ok:true,at:'Oct 29, 2026, 2:15 PM',note:'Approved. Needed for the grant reporting work.'}}},
  {id:'REQ-1042',t:'Acceptable Use Acknowledgment',form:'IT-010',sub:'Oct 6, 2026',upd:'Oct 6, 2026',st:'done',lab:'Complete',
   sum:'Annual acknowledgment of the district technology use policy, 2026–27.',
   steps:[
@@ -212,12 +268,45 @@ var R=[
   steps:[
    ['done','Submitted','You · Sep 15, 2026, 11:20 AM','Online form submitted.'],
    ['done','Supervisor approved','Your supervisor · Sep 16, 2026, 10:05 AM','Approved, pending security review.'],
-   ['done','Information Security review','Information Security · Sep 18, 2026','Reviewed against the data protection standard.'],
    ['no','Denied','Information Security · Sep 19, 2026, 3:30 PM','Not approved: the app stores district files outside approved storage. Use OneDrive instead, which is already on your laptop.'],
    ['done','Closed','Automatic · Sep 19, 2026, 3:31 PM','Decision emailed to you and your supervisor.']]}
 ];
+var DASH=[
+ ['REQ-1061','System Access Request','J. Alvarez','Nov 2','review','Awaiting supervisor',null],
+ ['REQ-1060','Loaner Laptop Request','T. Nguyen','Nov 2','review','Being set up',null],
+ ['REQ-1059','Shared Mailbox Request','M. Reed','Oct 31','done','Complete',1],
+ ['REQ-1058','Account Deactivation Request','HR Operations','Oct 30','done','Complete',1],
+ ['REQ-1056','Software Request','K. Patel','Oct 27','review','In security review',null],
+ ['REQ-1055','Acceptable Use Acknowledgment','D. Brooks','Oct 27','done','Complete',0],
+ ['REQ-1054','Equipment Request','S. Owens','Oct 24','done','Complete',4],
+ ['REQ-1052','System Access Request','L. Grant','Oct 22','done','Complete',2],
+ ['REQ-1050','Acceptable Use Exception Request','R. Simmons','Oct 20','denied','Denied',3],
+ ['REQ-1049','Loaner Laptop Request','A. Moore','Oct 17','done','Complete',3],
+ ['REQ-1047','Shared Mailbox Request','C. Young','Oct 15','done','Complete',2],
+ ['REQ-1045','Software Request','P. Lewis','Oct 13','done','Complete',5]
+];
+var R=JSON.parse(JSON.stringify(R0)), role='emp', nextId=1063;
+function nowStr(){var d=new Date();return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})+', '+d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});}
+function dateOnly(x){return String(x).split(', ').slice(0,2).join(', ');}
+function V(r){
+  if(!r.ev)return {steps:r.steps,st:r.st,lab:r.lab,upd:r.upd,stage:'closed'};
+  var e=r.ev,S=[],last=e.sub.at;
+  S.push(['done','Submitted','You · '+e.sub.at,e.sub.note]);
+  if(e.sup){last=e.sup.at;S.push(e.sup.ok?['done','Supervisor approved','Your supervisor · '+e.sup.at,e.sup.note]:['no','Denied by supervisor','Your supervisor · '+e.sup.at,e.sup.note]);}
+  else S.push(['now','Supervisor approval','Assigned to your supervisor · since '+dateOnly(e.sub.at),'Sent to your supervisor as an approval in Microsoft Teams.']);
+  if(e.sup&&!e.sup.ok){S.push(['done','Closed','Automatic · '+e.sup.at,'Decision emailed to you.']);return {steps:S,st:'denied',lab:'Denied',upd:dateOnly(last),stage:'closed'};}
+  if(e.sec){last=e.sec.at;S.push(e.sec.ok?['done','Information Security approved','Information Security · '+e.sec.at,e.sec.note]:['no','Denied','Information Security · '+e.sec.at,e.sec.note]);
+    if(!e.sec.ok){S.push(['done','Closed','Automatic · '+e.sec.at,'Decision emailed to you and your supervisor.']);return {steps:S,st:'denied',lab:'Denied',upd:dateOnly(last),stage:'closed'};}}
+  else S.push(e.sup?['now','Information Security review','Assigned to Information Security · since '+dateOnly(e.sup.at),'Checking device requirements: current operating system, disk encryption, and endpoint protection.']:['wait','Information Security review','Pending','']);
+  if(e.ful){last=e.ful.at;S.push(['done','Fulfilled','IT Help Desk · '+e.ful.at,'Network access set up for the approved device.']);S.push(['done','Closed','Automatic · '+e.ful.at,'Confirmation emailed to you and your supervisor.']);return {steps:S,st:'done',lab:'Complete',upd:dateOnly(last),stage:'closed'};}
+  S.push(e.sec?['now','Fulfillment','Assigned to the IT Help Desk','Setting up network access for the approved device.']:['wait','Fulfilled','Pending','']);
+  S.push(['wait','Closed','Pending','']);
+  var stage=!e.sup?'sup':!e.sec?'sec':'ful';
+  return {steps:S,st:'review',lab:{sup:'Awaiting supervisor',sec:'In security review',ful:'Being set up'}[stage],upd:dateOnly(last),stage:stage};
+}
 var DOT={done:'✓',now:'•',wait:'',no:'✕'};
 var LATER='<div class="later-note"><span class="pill later-pill">Later phase</span><span>Concept of request tracking. Sample requests only; people, dates, and decisions are illustrative.</span></div>';
+var TICON='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg>';
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 var view=document.getElementById('view'), q=document.getElementById('q');
 var state={fmt:'all',task:null,text:''};
@@ -245,7 +334,7 @@ function chips(){
   return c;
 }
 var pages={
- home:function(){return band('<h1>Find the form you need</h1><p>Approved district forms in one place, each with instructions for completing and submitting it.</p><div class="btns"><a class="btn solid" href="#/all">Browse all forms A–Z</a><a class="btn ghost" href="#/help">How to complete and submit a form</a></div>')+
+ home:function(){return band('<h1>Find the form you need</h1><p>Approved district forms in one place, each with instructions for completing and submitting it.</p><div class="btns"><a class="tourcta" href="#/tour">▶ Take the 60-second tour</a><a class="btn solid" href="#/all">Browse all forms A–Z</a><a class="btn ghost" href="#/help">How to complete and submit a form</a></div>')+
   '<main><h2>Start with a task</h2><p class="sub">Not sure which department owns the form? Start here.</p><div class="grid4">'+
   TASKS.map(function(t,i){return '<a class="card task" href="#/all?task='+i+'">'+t+'<span aria-hidden="true">→</span></a>'}).join('')+'</div>'+
   '<h2 style="margin-top:28px">Browse by department</h2><div class="grid2">'+
@@ -266,47 +355,141 @@ var pages={
   return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; All forms</div><h1>'+esc(title)+'</h1><p>'+(state.text?'Results for “'+esc(state.text)+'” across every department.':'Every published form across the district. During the pilot, IT forms only.')+'</p>')+
   '<main><div class="toolbar" role="group" aria-label="Filter by task">'+tchips+'</div><div class="toolbar" role="group" aria-label="Filter by format">'+chips()+'<span class="count">'+list.length+' of '+F.length+' forms</span></div>'+rows(list,false)+'</main>'},
  requests:function(){
-  return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; My requests</div><h1>My requests</h1><p>Every request you submit, where it stands, and who has it.</p>')+
-  '<main>'+LATER+'<table><thead><tr><th style="width:40%">Request</th><th style="width:14%">Submitted</th><th style="width:14%">Status</th><th>Last update</th></tr></thead><tbody>'+
-  R.map(function(r){return '<tr class="row"><td><a class="reqlink" href="#/req?id='+r.id+'">'+esc(r.t)+'</a> <span class="fid">'+r.id+'</span><span class="fdesc">'+esc(r.sum)+'</span></td><td>'+r.sub+'</td><td><span class="st '+r.st+'">'+r.lab+'</span></td><td class="upd">'+r.upd+'</td></tr>'}).join('')+
+  return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; My requests</div><h1>My requests</h1><p>Every request you submit, where it stands, and who has it.</p><div class="btns"><a class="btn solid" href="#/submit">New acceptable use exception request</a></div>')+
+  '<main>'+LATER+'<table><thead><tr><th style="width:40%">Request</th><th style="width:14%">Submitted</th><th style="width:16%">Status</th><th>Last update</th></tr></thead><tbody>'+
+  R.map(function(r){var v=V(r);return '<tr class="row'+(r.isNew?' newrow':'')+'"><td><a class="reqlink" href="#/req?id='+r.id+'">'+esc(r.t)+'</a> <span class="fid">'+r.id+'</span><span class="fdesc">'+esc(r.sum)+'</span></td><td>'+r.sub+'</td><td><span class="st '+v.st+'">'+v.lab+'</span></td><td class="upd">'+(v.upd||r.sub)+'</td></tr>'}).join('')+
   '</tbody></table><p class="note">Each request keeps a full history: who acted, when, and why. That history is the record used for status reporting and audits.</p></main>'},
- req:function(id){var r=R.filter(function(x){return x.id===id})[0]||R[0];
+ req:function(id){var r=R.filter(function(x){return x.id===id})[0]||R[0],v=V(r);
+  var hint=v.stage==='sup'?'<div class="empty2">Waiting on your supervisor. <a href="#" data-role-go="sup">Switch to Supervisor</a> to see the approval arrive in Teams.</div>':v.stage==='sec'?'<div class="empty2">Waiting on Information Security. <a href="#" data-role-go="it">Switch to IT staff</a> to review it.</div>':v.stage==='ful'?'<div class="empty2">Approved and being set up. <a href="#" data-role-go="it">Switch to IT staff</a> to mark it fulfilled.</div>':'';
   return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; <a href="#/requests">My requests</a> &nbsp;/&nbsp; '+r.id+'</div><h1>'+esc(r.t)+'</h1><p>'+esc(r.sum)+'</p>')+
-  '<main>'+LATER+'<div class="reqgrid"><div><h2>History</h2><ol class="tl">'+
-  r.steps.map(function(x){return '<li class="'+x[0]+'"><span class="dot" aria-hidden="true">'+DOT[x[0]]+'</span><h3>'+esc(x[1])+(x[0]==='now'?' <span class="st review">Current step</span>':'')+'</h3><div class="who">'+esc(x[2])+'</div>'+(x[3]?'<div class="nt">'+esc(x[3])+'</div>':'')+'</li>'}).join('')+
-  '</ol></div><aside class="card side"><h3 style="margin:0 0 10px;color:var(--navy);font-size:16px">Request details</h3><dl><dt>Request ID</dt><dd>'+r.id+'</dd><dt>Status</dt><dd><span class="st '+r.st+'">'+r.lab+'</span></dd><dt>Form</dt><dd>'+r.form+'</dd><dt>Submitted</dt><dd>'+r.sub+'</dd><dt>Last update</dt><dd>'+r.upd+'</dd><dt>Department</dt><dd>Information Technology</dd></dl>'+
+  '<main>'+LATER+hint+'<div class="reqgrid"><div><h2>History</h2><ol class="tl">'+
+  v.steps.map(function(x){return '<li class="'+x[0]+'"><span class="dot" aria-hidden="true">'+DOT[x[0]]+'</span><h3>'+esc(x[1])+(x[0]==='now'?' <span class="st review">Current step</span>':'')+'</h3><div class="who">'+esc(x[2])+'</div>'+(x[3]?'<div class="nt">'+esc(x[3])+'</div>':'')+'</li>'}).join('')+
+  '</ol></div><aside class="card side"><h3 style="margin:0 0 10px;color:var(--navy);font-size:16px">Request details</h3><dl><dt>Request ID</dt><dd>'+r.id+'</dd><dt>Status</dt><dd><span class="st '+v.st+'">'+v.lab+'</span></dd><dt>Form</dt><dd>'+r.form+'</dd><dt>Submitted</dt><dd>'+r.sub+'</dd><dt>Last update</dt><dd>'+(v.upd||r.sub)+'</dd><dt>Department</dt><dd>Information Technology</dd></dl>'+
   '<p class="small" style="margin:14px 0 0">Questions about this request? <a href="#/help">Contact the IT Help Desk</a> and give the request ID.</p></aside></div>'+
   '<p style="margin-top:6px"><a href="#/requests" style="font-weight:600">← Back to My requests</a></p></main>'},
+ submit:function(){
+  return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; <a href="#/all">All forms</a> &nbsp;/&nbsp; IT-012</div><h1>Acceptable Use Exception Request</h1><p>Ask for an exception to the technology use policy. Sample answers are filled in so you can submit right away.</p>')+
+  '<main><div class="frm"><form id="excForm" novalidate>'+
+  '<div class="two"><div class="fld"><label for="fName">Your name</label><input id="fName" value="Eric Crutchfield" readonly></div><div class="fld"><label for="fSup">Supervisor</label><input id="fSup" value="From your Microsoft 365 profile" readonly><p class="hint">Filled in automatically. No one has to look it up.</p></div></div>'+
+  '<div class="fld"><label for="fType">Type of exception</label><select id="fType"><option>Personal device on the staff network</option><option>Software not on the approved list</option><option>Access outside normal hours</option><option>Other</option></select></div>'+
+  '<div class="fld"><label for="fDesc">What do you need?</label><textarea id="fDesc">Connect my personal tablet to the staff Wi-Fi to run the Continuing Education check-in app at registration events.</textarea></div>'+
+  '<div class="fld"><label for="fWhy">Business reason</label><textarea id="fWhy">The check-in app only runs on the tablet the program purchased with grant funds. Events run through May.</textarea></div>'+
+  '<div class="two"><div class="fld"><label for="fEnd">Needed until</label><input id="fEnd" type="date" value="2027-05-31"></div><div class="fld"><label for="fAck">Acknowledgment</label><select id="fAck"><option>I agree to follow the security requirements</option></select></div></div>'+
+  '<button class="btn primary" type="submit" style="font-size:15px;padding:11px 22px">Submit request</button> <a class="btn plain" href="#/all">Cancel</a></form>'+
+  '<aside class="card"><h3 style="margin:0 0 6px;color:var(--navy);font-size:16px">What happens next</h3><ol class="flow"><li><b>1</b><span>You get a request ID and an email confirmation.</span></li><li><b>2</b><span>Your supervisor gets an approval in Microsoft Teams.</span></li><li><b>3</b><span>Information Security reviews the device or software.</span></li><li><b>4</b><span>The IT Help Desk sets it up, and you’re notified at each step.</span></li></ol><p class="small" style="margin:6px 0 0">Track every step in My requests.</p></aside></div></main>'},
+ done:function(id){var r=R.filter(function(x){return x.id===id})[0]||R[0];
+  return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; Request submitted</div><h1>Request submitted</h1><p>Your supervisor has been notified in Microsoft Teams.</p>')+
+  '<main><div class="okbox"><div class="big" aria-hidden="true">✓</div><h2>Thanks, Eric. Your request is in.</h2><div class="rid">'+r.id+'</div><p class="small" style="margin:6px 0 0">A confirmation was emailed to you. Keep the request ID for any questions.</p></div>'+
+  '<div class="next3"><div class="card"><h3>Track it</h3><p>See each step and who has it now.</p><a class="btn primary" href="#/req?id='+r.id+'">Open the request</a></div>'+
+  '<div class="card"><h3>See what your supervisor sees</h3><p>The approval arrives as a Teams card.</p><a class="btn primary" href="#" data-role-go="sup">Switch to Supervisor</a></div>'+
+  '<div class="card"><h3>See the IT view</h3><p>Every request, live, on one dashboard.</p><a class="btn primary" href="#" data-role-go="it">Switch to IT staff</a></div></div></main>'},
+ approvals:function(){
+  var who=role==='it'?'it':'sup';
+  var pend=R.filter(function(r){var v=V(r);return r.ev&&(who==='sup'?v.stage==='sup':(v.stage==='sec'||v.stage==='ful'));});
+  var recent=R.filter(function(r){return r.ev&&r.acted&&r.acted[who];});
+  var title=who==='sup'?'Waiting on you':'Waiting on IT';
+  var intro=who==='sup'?'Approvals for your staff arrive in Microsoft Teams. Approving here or in Teams updates the request record.':'Information Security reviews and Help Desk setup. Each action updates the employee’s request record.';
+  var h=band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; Approvals</div><h1>'+title+'</h1><p>'+intro+'</p>')+'<main>';
+  if(!pend.length&&!recent.length)h+='<div class="empty2">Nothing waiting. '+(who==='sup'?'<a href="#" data-role-go="emp" data-to="submit">Switch to Employee and submit a request</a> to see it arrive here.':'Approve a request as Supervisor first, or check the <a href="#/dashboard">Dashboard</a>.')+'</div>';
+  pend.concat(recent.filter(function(r){return pend.indexOf(r)<0})).forEach(function(r){h+=teamsCard(r,who);});
+  if(pend.length||recent.length)h+='<p class="cap">Microsoft Teams approval card, as it would appear in the approver’s Teams chat. Sample content only.</p>';
+  return h+'</main>'},
+ dashboard:function(){
+  var mine=R.filter(function(r){return r.ev}).map(function(r){var v=V(r);return [r.id,r.t,'E. Crutchfield',r.sub.replace(/, \d{4}$/,''),v.st,v.lab,null,r.isNew];});
+  var rows=mine.concat(DASH);
+  var open=rows.filter(function(x){return x[4]==='review'}).length;
+  var waitSup=rows.filter(function(x){return x[5]==='Awaiting supervisor'}).length;
+  var waitIT=rows.filter(function(x){return x[5]==='In security review'||x[5]==='Being set up'}).length;
+  var closed=rows.filter(function(x){return x[4]!=='review'});
+  var tt=DASH.filter(function(x){return x[6]!==null}).map(function(x){return x[6]});var avg=(tt.reduce(function(a,b){return a+b},0)/tt.length).toFixed(1);
+  var due=F.filter(function(f){return /Jun|Jul/.test(f.r)});
+  var byForm={};rows.forEach(function(x){byForm[x[1]]=(byForm[x[1]]||0)+1});var top=Object.keys(byForm).sort(function(a,b){return byForm[b]-byForm[a]}).slice(0,5),mx=byForm[top[0]];
+  var it=R.filter(function(r){var v=V(r);return r.ev&&(v.stage==='sec'||v.stage==='ful')}).length;
+  return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; Dashboard</div><h1>IT request dashboard</h1><p>Every request across the district, live from the request list. Last 30 days.</p>'+(it?'<div class="btns"><a class="btn solid" href="#/approvals">'+it+' waiting on IT →</a></div>':''))+
+  '<main><div class="tiles"><div class="tile hot"><div class="n">'+open+'</div><div class="l">Open requests</div></div><div class="tile"><div class="n">'+waitSup+'</div><div class="l">Waiting on supervisors</div></div><div class="tile"><div class="n">'+waitIT+'</div><div class="l">Waiting on IT</div></div><div class="tile"><div class="n">'+avg+'<span style="font-size:15px;font-weight:600"> days</span></div><div class="l">Average time to close</div></div></div>'+
+  '<div class="dash2"><div><h2>Requests by form</h2><div class="bars">'+top.map(function(k){return '<div class="r"><span>'+esc(k)+'</span><span class="t"><i style="width:'+Math.round(byForm[k]/mx*100)+'%"></i></span><b>'+byForm[k]+'</b></div>'}).join('')+'</div></div>'+
+  '<div><h2>Forms due for review</h2>'+(due.length?'<table><tbody>'+due.map(function(f){return '<tr class="row"><td><b>'+esc(f.t)+'</b> <span class="fid">'+f.id+'</span></td><td class="upd">Last reviewed '+f.r+'</td></tr>'}).join('')+'</tbody></table><p class="note">Owners get an automatic reminder when a form is due.</p>':'<div class="empty2">All forms are current.</div>')+'</div></div>'+
+  '<h2 style="margin-top:22px">Recent requests</h2><table><thead><tr><th style="width:12%">ID</th><th>Request</th><th style="width:17%">Requested by</th><th style="width:11%">Submitted</th><th style="width:18%">Status</th></tr></thead><tbody>'+
+  rows.map(function(x){return '<tr class="row'+(x[7]?' newrow':'')+'"><td class="fid" style="font-size:13px">'+x[0]+'</td><td>'+esc(x[1])+'</td><td>'+esc(x[2])+'</td><td class="upd">'+x[3]+'</td><td><span class="st '+x[4]+'">'+x[5]+'</span></td></tr>'}).join('')+
+  '</tbody></table><p class="note">Built from the SharePoint request list. No extra reporting tools needed.</p></main>'},
  help:function(){return band('<div class="crumb"><a href="#/home">Forms Center</a> &nbsp;/&nbsp; Help</div><h1>Help</h1><p>How to find, complete, and submit a form.</p>')+
   '<main><div class="three"><div class="card"><h3>Find a form</h3><ol><li>Type a word in the search box at the top, such as “laptop” or “access”.</li><li>Or pick a task on the home page.</li><li>Or browse by department.</li></ol></div>'+
   '<div class="card"><h3>'+FMT.pdf+'</h3><ol><li>Download the PDF.</li><li>Complete it and get signatures.</li><li>Submit it as the form row says.</li></ol></div>'+
   '<div class="card"><h3>'+FMT.online+'</h3><ol><li>Open the form in your browser.</li><li>Complete and submit it.</li><li>Keep the confirmation email.</li></ol></div></div>'+
   '<div class="help"><div><b>IT Help Desk</b><br><span style="color:var(--muted);font-size:14px">Contact details are confirmed before launch.</span></div></div></main>'}
 };
+var tour=null;
+var TOUR=[
+ {set:function(){go('home')},tx:'This is the Forms Center. Employees find any form by searching, picking a task, or choosing a department.',tg:'.grid4'},
+ {set:function(){go('submit')},tx:'Online forms fill in what we already know, like your name and supervisor. Press Next to submit this sample request.',tg:'#excForm'},
+ {set:function(){var f=document.getElementById('excForm');if(f){f.requestSubmit?f.requestSubmit():f.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}));}tour.id=R[0].id;},tx:'Submitted. The employee gets a request ID and an email confirmation right away, and the supervisor is notified in Teams.',tg:'.okbox'},
+ {set:function(){setRole('sup')},tx:'Now the supervisor’s view. The approval arrives as a card in Microsoft Teams. Press Next to approve it.',tg:'.teams'},
+ {set:function(){act(tour.id,'ok');setRole('it','approvals')},tx:'Information Security gets the next step automatically, with the supervisor’s approval attached. Press Next to approve the security review.',tg:'.teams'},
+ {set:function(){act(tour.id,'ok');act(tour.id,'ful');setRole('it','dashboard')},tx:'Approved, set up, and closed. The IT dashboard shows every request across the district, live: what’s open, where it’s stuck, and how long it takes.',tg:'.tiles'},
+ {set:function(){setRole('emp','req?id='+tour.id)},tx:'Back to the employee. Every step is recorded: who acted, when, and why. That history is the audit record.',tg:'.tl'},
+ {set:function(){go('home')},tx:'That’s the tour. Explore on your own, switch roles at the top right, or press Reset demo to start over.',tg:'.tourcta',last:true}
+];
+function tourBar(){if(!tour)return '';var st=TOUR[tour.i];
+  return '<div class="tourbar" role="region" aria-label="Guided tour"><span class="k">Tour · '+(tour.i+1)+' of '+TOUR.length+'</span><span class="tx">'+st.tx+'</span><span class="prog" aria-hidden="true">'+TOUR.map(function(_,j){return '<i class="'+(j<=tour.i?'on':'')+'"></i>'}).join('')+'</span>'+
+  (st.last?'<button class="nx" data-tour="exit">Finish</button>':'<button class="nx" data-tour="next">Next →</button><button class="ex" data-tour="exit">Exit tour</button>')+'</div>';}
+function tourMark(){if(!tour)return;var t=document.querySelector(TOUR[tour.i].tg);if(t)t.classList.add('pulse');}
+function startTour(){R=JSON.parse(JSON.stringify(R0));nextId=1063;role='emp';syncRole();tour={i:0,id:null};TOUR[0].set();}
+function tourNext(){tour.i++;var quiet=toast;toast=function(){};try{TOUR[tour.i].set();}finally{toast=quiet;}render(cur);}
+function teamsCard(r,who){var v=V(r);
+  var act=r.acted&&r.acted[who];
+  var stageLabel=who==='sup'?'Approval requested':v.stage==='ful'?'Ready to set up':'Security review requested';
+  var body='<dl><dt>Request</dt><dd>'+r.id+' · '+esc(r.t)+'</dd><dt>From</dt><dd>Eric Crutchfield</dd><dt>Type</dt><dd>'+esc(r.type||'')+'</dd><dt>Need</dt><dd>'+esc(r.sum)+'</dd><dt>Reason</dt><dd>'+esc(r.reason||'')+'</dd>'+(who==='it'&&r.ev.sup?'<dt>Supervisor</dt><dd>Approved '+dateOnly(r.ev.sup.at)+'</dd>':'')+'</dl>';
+  var ctrl;
+  if(act)ctrl='<div class="done '+(act.ok?'ok':'no')+'">'+(act.ok?'✓ ':'✕ ')+act.txt+'</div>';
+  else if(v.stage==='ful'&&who==='it')ctrl='<button class="tbtn go" data-act="ful" data-id="'+r.id+'">Mark fulfilled</button>';
+  else ctrl='<textarea placeholder="Add a comment (optional)" id="c-'+r.id+'"></textarea><button class="tbtn go" data-act="ok" data-id="'+r.id+'">Approve</button> <button class="tbtn" data-act="no" data-id="'+r.id+'">Deny</button>';
+  return '<div class="teams"><div class="bar"><span class="tlogo">T</span>Microsoft Teams<span class="tm">Approvals</span></div><div class="msg"><span class="app" aria-hidden="true">'+TICON+'</span><div style="flex:1;min-width:0"><div class="who"><b>Forms Center</b> &nbsp;'+(act?'':'just now')+'</div><div class="acard"><h3>'+stageLabel+'</h3><div class="sub2">'+(who==='sup'?'Your direct report needs a decision.':'Assigned to '+(v.stage==='ful'?'the IT Help Desk':'Information Security')+'.')+'</div>'+body+ctrl+'</div></div></div></div>';
+}
+function act(id,kind){var r=R.filter(function(x){return x.id===id})[0];if(!r)return;var v=V(r),who=role==='it'?'it':'sup',t=nowStr();
+  var c=(document.getElementById('c-'+id)||{}).value||'';r.acted=r.acted||{};
+  if(kind==='ful'){r.ev.ful={at:t};r.acted.it={ok:true,txt:'Marked fulfilled by you'};toast('Request closed. Eric was emailed a confirmation.');}
+  else if(v.stage==='sup'){r.ev.sup={ok:kind==='ok',at:t,note:c||(kind==='ok'?'Approved.':'Not approved.')};r.acted.sup={ok:kind==='ok',txt:(kind==='ok'?'Approved':'Denied')+' by you · '+t};
+    toast(kind==='ok'?'Approved. Sent to Information Security for review.':'Denied. Eric was notified with your comment.');}
+  else if(v.stage==='sec'){r.ev.sec={ok:kind==='ok',at:t,note:c||(kind==='ok'?'Device meets requirements: encryption on, current OS, endpoint protection installed.':'Device does not meet security requirements.')};r.acted.it={ok:kind==='ok',txt:(kind==='ok'?'Approved':'Denied')+' by Information Security · '+t};
+    toast(kind==='ok'?'Approved. Assigned to the IT Help Desk for setup.':'Denied. Eric and his supervisor were notified.');}
+  if(kind==='ful'||(v.stage==='sec'&&kind==='ok')){ r.acted.it.txt=r.acted.it.txt; }
+  render(cur);
+}
+function setRole(rl,to){role=rl;document.getElementById('role').value=rl;document.getElementById('avatar').textContent={emp:'EC',sup:'SV',it:'IT'}[rl];
+  document.querySelectorAll('nav.top a[data-roles]').forEach(function(a){a.hidden=a.dataset.roles.split(' ').indexOf(rl)<0;});
+  go(to||{emp:'requests',sup:'approvals',it:'dashboard'}[rl]);
+  toast({emp:'Viewing as Employee (Eric).',sup:'Viewing as Eric’s supervisor.',it:'Viewing as IT staff.'}[rl]);}
+var tt=null;function toast(m){var el=document.getElementById('toast');try{var fe=window.frameElement;if(fe){var r=fe.getBoundingClientRect(),vb=Math.min(r.height,window.parent.innerHeight-r.top);el.style.top=Math.max(10,vb-70)+'px';el.style.bottom='auto';}}catch(e){}el.textContent=m;el.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){el.classList.remove('on')},2600);}
 var curHash=location.hash.replace(/^#\/?/,'')||'home';
 window.addEventListener('hashchange',function(){curHash=location.hash.replace(/^#\/?/,'')||'home';route();});
 function go(h){curHash=h;try{history.replaceState(null,'','#/'+h);}catch(e){}route();}
 function route(){
-  var h=curHash||'home', parts=h.split('?'), page=pages[parts[0]]?parts[0]:'home';
+  var h=curHash||'home';
+  if(h==='tour'){curHash='home';startTour();return;}
+  var parts=h.split('?'), page=pages[parts[0]]?parts[0]:'home';
   var p=new URLSearchParams(parts[1]||'');
   if(page==='all'){ if(p.has('task')){var n=parseInt(p.get('task'),10);state.task=(n>=0&&n<TASKS.length)?n:null;} if(p.has('q')){state.text=p.get('q');q.value=state.text;state.task=null;} }
   else { state.task=null; state.fmt='all'; }
   if(page!=='all'&&page!=='it'){state.text='';q.value='';}
   if(page==='it'&&!p.has('q')){state.text='';q.value='';}
-  var navPage=page==='req'?'requests':page;
+  if(page==='approvals'&&role==='emp'){role='sup';syncRole();}
+  if(page==='dashboard'&&role!=='it'){role='it';syncRole();}
+  var navPage=page==='req'||page==='done'?'requests':page==='submit'?'all':page;
   document.querySelectorAll('nav.top a').forEach(function(a){a.classList.toggle('on',a.dataset.nav===navPage);if(a.dataset.nav===navPage)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
   reqId=p.get('id');
   render(page); window.scrollTo(0,0);
 }
 var cur='home';
 var reqId=null;
-function render(page){cur=page;view.innerHTML=pages[page](reqId);sendH();}
+function syncRole(){document.getElementById('role').value=role;document.getElementById('avatar').textContent={emp:'EC',sup:'SV',it:'IT'}[role];document.querySelectorAll('nav.top a[data-roles]').forEach(function(a){a.hidden=a.dataset.roles.split(' ').indexOf(role)<0;});}
+function render(page){cur=page;view.innerHTML=tourBar()+pages[page](reqId);tourMark();sendH();}
 function sendH(){try{if(window.parent!==window)window.parent.postMessage({wcccdProtoH:document.body.getBoundingClientRect().height,nav:true},'*');}catch(e){}}
 window.addEventListener('load',sendH);window.addEventListener('resize',sendH);
 view.addEventListener('click',function(e){
   var b=e.target.closest('button');if(!b)return;
   if(b.dataset.fmt){state.fmt=b.dataset.fmt;render(cur);}
   else if(b.dataset.task!==undefined){state.task=b.dataset.task===''?null:parseInt(b.dataset.task,10);render(cur);}
+  else if(b.dataset.act){act(b.dataset.id,b.dataset.act);}
   else if(b.dataset.id){openForm(b.dataset.id,b);}
 });
 document.getElementById('searchForm').addEventListener('submit',function(e){e.preventDefault();state.text=q.value;state.task=null;
@@ -319,13 +502,22 @@ function openForm(id,btn){var f=F.filter(function(x){return x.id===id})[0];if(!f
   document.getElementById('dFormat').innerHTML=FMT[f.f];document.getElementById('dSubmit').textContent=f.s;
   document.getElementById('dCat').textContent=CATS[f.c];document.getElementById('dRev').textContent=f.r;
   document.getElementById('dSteps').innerHTML=f.f==='pdf'?'<b>Fillable PDF</b><ol><li>Download and complete the PDF.</li><li>Get any required signatures.</li><li>'+esc(f.s)+'</li></ol>':'<b>Online form</b><ol><li>Open the form in your browser.</li><li>Complete and submit it.</li><li>Keep the confirmation email.</li></ol>';
-  document.getElementById('dOpen').textContent=f.f==='pdf'?'Download PDF':'Open online form';
+  var dO=document.getElementById('dOpen');dO.textContent=f.f==='pdf'?'Download PDF':'Open online form';
+  if(f.id==='IT-012'){dO.dataset.go='submit';dO.removeAttribute('aria-disabled');dO.textContent='Start this request';}else{delete dO.dataset.go;dO.setAttribute('aria-disabled','true');}
   try{var fe=window.frameElement;if(fe){var r=fe.getBoundingClientRect(),ph=window.parent.innerHeight,vt=Math.max(0,-r.top+130),vh=Math.min(ph-150,r.bottom-Math.max(r.top,130));
     drawer.style.top=vt+'px';drawer.style.height=Math.max(380,vh)+'px';}}catch(e){}
   drawer.classList.add('open');scrim.classList.add('open');drawer.setAttribute('aria-hidden','false');document.getElementById('dClose').focus();}
 function closeForm(){drawer.classList.remove('open');scrim.classList.remove('open');drawer.setAttribute('aria-hidden','true');if(opener&&document.body.contains(opener))opener.focus();}
 document.getElementById('dClose').addEventListener('click',closeForm);scrim.addEventListener('click',closeForm);
-document.getElementById('dOpen').addEventListener('click',function(e){e.preventDefault();});
+document.getElementById('dOpen').addEventListener('click',function(e){e.preventDefault();if(this.dataset.go){closeForm();go(this.dataset.go);}});
+view.addEventListener('click',function(e){var tb=e.target.closest('[data-tour]');if(tb){e.preventDefault();if(tb.dataset.tour==='next')tourNext();else{tour=null;render(cur);}return;}});
+view.addEventListener('click',function(e){var a=e.target.closest('[data-role-go]');if(!a)return;e.preventDefault();setRole(a.dataset.roleGo,a.dataset.to);});
+view.addEventListener('submit',function(e){if(e.target.id!=='excForm')return;e.preventDefault();var t=nowStr(),id='REQ-'+(nextId++);
+  var desc=document.getElementById('fDesc').value.trim()||'Exception request',why=document.getElementById('fWhy').value.trim();
+  R.unshift({id:id,isNew:true,t:'Acceptable Use Exception Request',form:'IT-012',sub:dateOnly(t),sum:desc,type:document.getElementById('fType').value,reason:why,ev:{sub:{at:t,note:'Online form submitted.'}}});
+  go('done?id='+id);toast('Submitted. Your supervisor was notified in Teams.');});
+document.getElementById('role').addEventListener('change',function(){setRole(this.value);});
+document.getElementById('resetDemo').addEventListener('click',function(e){e.preventDefault();tour=null;R=JSON.parse(JSON.stringify(R0));nextId=1063;role='emp';syncRole();go('home');toast('Demo reset.');});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&drawer.classList.contains('open'))closeForm();});
 document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#/"]');if(!a)return;e.preventDefault();if(drawer.classList.contains('open'))closeForm();go(a.getAttribute('href').slice(2));});
 route();

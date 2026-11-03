@@ -49,6 +49,7 @@ section.panel.active { display:block; animation:fade .25s ease; }
 .try { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0 0 12px; }
 .try-label { font-size:13px; font-weight:700; color:var(--navy); margin-right:2px; }
 .try button { font:inherit; font-size:13px; font-weight:600; color:var(--navy); background:var(--tint); border:1px solid var(--line); border-radius:20px; padding:6px 12px; cursor:pointer; }
+.try button.tour { background:#F2B705; border-color:#F2B705; color:#1B2330; font-weight:700; }
 .try button:hover, .try button[aria-pressed="true"] { background:var(--navy); color:#fff; border-color:var(--navy); }
 .nextlink { text-align:right; margin:14px 4px 0; font-size:14.5px; }
 .nextlink a { font-weight:700; text-decoration:none; }
@@ -172,7 +173,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
     <span class="rule">Find the right form. Know how to submit it. Trace every request.</span>
     <div class="hero-meta">
       <div><b>The ask:</b> approve the direction and the IT pilot.</div>
-      <div><b>Short on time?</b> Read the <a href="WCCCD_Forms_Center_Decision_Brief.pdf" download>Decision Brief</a>, then <a href="#proto">try the prototype</a>. About 10 minutes.</div>
+      <div><b>Short on time?</b> Read the <a href="WCCCD_Forms_Center_Decision_Brief.pdf" download>Decision Brief</a>, then take the <a href="#proto">60-second prototype tour</a>. About 10 minutes.</div>
     </div>
     </div>
   </div>
@@ -202,10 +203,10 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
   </div>
 
   <div class="card" style="border-color:var(--blue)">
-    <div class="num">Step 2 · Try it · clickable prototype</div>
+    <div class="num">Step 2 · See it work · 60-second tour</div>
     <h3>Prototype</h3>
-    <p>Search for a form, pick a task, browse the IT page, and open My requests to see how a request is tracked to closure. Sample content only; nothing is submitted.</p>
-    <a class="go" href="#proto" style="background:var(--blue)">Try the prototype</a>
+    <p>A 60-second guided tour: an employee submits a request, the supervisor approves it in Microsoft Teams, IT closes it out, and the dashboard updates live.</p>
+    <a class="go" href="#proto" style="background:var(--blue)">▶ Take the tour</a>
   </div>
 
   <div class="card primary">
@@ -592,18 +593,19 @@ schedule.</p>
   <div class="doc">
     <div class="dochead">
       <h2>Prototype</h2>
-      <span><a class="dl play" href="prototype.html" target="_blank" rel="noopener">⛶ Open full screen</a></span>
+      <span><a class="dl play" href="prototype.html#/tour" target="_blank" rel="noopener">⛶ Open full screen</a></span>
     </div>
-    <div class="tip"><span class="tip-label">How to use this page</span>Tap a <b>Try these</b> button for a guided look, or click around on your own. Use <b>Open full screen</b> for more room.</div>
-    <p class="lede">A clickable version of the proposed design. Pick a task below, or explore on your own: search, browse the IT page, open a form, or check My requests. Eleven sample forms and three sample requests; nothing is submitted. If the preview doesn’t load on your network, use Open full screen.</p>
+    <div class="tip"><span class="tip-label">How to use this page</span>Start with the <b>60-second tour</b>; it begins automatically below. Press <b>Next</b> to move through it, then use <b>Viewing as</b> at the top right of the prototype to switch between Employee, Supervisor, and IT staff.</div>
+    <p class="lede">A working model of the proposed Forms Center. The tour shows the whole story in about a minute: an employee submits a request, the supervisor approves it in Microsoft Teams, IT reviews and closes it, and the dashboard updates live. Switch roles at the top right to explore on your own. Sample data only; nothing leaves the page. If the preview doesn’t load on your network, use Open full screen.</p>
     <div class="try" role="group" aria-label="Guided tasks">
-      <span class="try-label">Try these:</span>
-      <button type="button" data-try="all?q=laptop">Find the laptop request</button>
-      <button type="button" data-try="it">Browse the IT forms page</button>
-      <button type="button" data-try="req?id=REQ-1057">Check an AUP exception in review</button>
-      <button type="button" data-try="req?id=REQ-0981">See a denied request and why</button>
+      <button type="button" class="tour" data-try="tour">▶ Take the 60-second tour</button>
+      <span class="try-label">Or jump to:</span>
+      <button type="button" data-try="submit">Submit a request</button>
+      <button type="button" data-try="approvals">Approve as a supervisor</button>
+      <button type="button" data-try="dashboard">IT dashboard</button>
+      <button type="button" data-try="all?q=laptop">Find a form</button>
     </div>
-    <div class="demo-wrap"><iframe id="protoFrame" src="prototype.html" title="WCCCD Forms Center prototype" loading="lazy"></iframe></div>
+    <div class="demo-wrap"><iframe id="protoFrame" src="prototype.html#/tour" title="WCCCD Forms Center prototype" loading="lazy"></iframe></div>
     <p class="illus" style="margin-top:10px">The live portal would be built in SharePoint as described in the Design and Build Guide. The prototype shows the experience, not the build.</p>
   </div>
   <p class="nextlink"><a href="#design">Next: Proposed Design →</a></p>
