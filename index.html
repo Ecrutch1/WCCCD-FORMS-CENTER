@@ -154,7 +154,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
 <nav class="tabs" id="tabs" aria-label="Sections">
   <a href="#home" class="active">Home</a>
   <a href="#proto">Prototype</a>
-  <a href="#status">Decisions and Timeline</a>
+  <a href="#status">Decisions</a>
   <a href="#pres">Presentation</a>
   <a href="#plan">The Plan</a>
   <a href="#design">Proposed Design</a>
@@ -213,9 +213,9 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
 
   <div class="card primary">
     <div class="num">Step 3 · What we need from you</div>
-    <h3 style="font-size:20px">Decisions and Timeline</h3>
-    <p style="font-size:14.5px">The decisions still open and who owns each one, three build options with hours, cost, and dates, notes for Security and Purchasing reviewers, and what has changed.</p>
-    <a class="go" href="#status">See decisions and timeline</a>
+    <h3 style="font-size:20px">Decisions</h3>
+    <p style="font-size:14.5px">The decisions still open and who owns each one, notes for Security and Purchasing reviewers, and what has changed.</p>
+    <a class="go" href="#status">See decisions</a>
   </div>
 
   <div class="card">
@@ -253,54 +253,25 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
   </div>
 </section>
 
-<section class="panel" id="status" aria-label="Decisions and Timeline">
+<section class="panel" id="status" aria-label="Decisions">
   <div class="doc">
     <div class="dochead">
-      <h2>Decisions and Timeline</h2>
+      <h2>Decisions</h2>
     </div>
-    <div class="tip"><span class="tip-label">How to use this page</span>Start with <b>Decisions needed</b>. The build options below show what each choice means for time and cost.</div>
-    <p class="lede">What still needs a decision, who owns it, how long the build takes under each option, and what has changed in this package.</p>
+    <div class="tip"><span class="tip-label">How to use this page</span>Start with <b>Decisions needed</b>, then the notes for your area.</div>
+    <p class="lede">What still needs a decision, who owns it, notes for reviewers, and what has changed in this package.</p>
 
     <h3>Decisions needed</h3>
     <div class="tablewrap"><table>
     <thead><tr><th>Decision</th><th>Owner</th><th>Notes</th></tr></thead>
     <tbody>
     <tr><td><strong>Approve the direction and the IT pilot</strong></td><td>CIO</td><td>The decision requested in the Decision Brief.</td></tr>
-    <tr><td><strong>Choose a build option</strong></td><td>CIO</td><td>See Build options and timeline below.</td></tr>
     <tr><td><strong>RFP intake: build the purchasing module or join MITN</strong></td><td>CIO and Purchasing</td><td>Laid out in the Purchasing Module brief.</td></tr>
     <tr><td><strong>Name business owners</strong></td><td>CIO</td><td>Forms (IT), external intake (Purchasing), and request tracking.</td></tr>
     <tr><td><strong>Guest access for vendors</strong></td><td>Information Security</td><td>Needed only if the purchasing module is built. Review can run in parallel with the IT pilot.</td></tr>
     <tr><td><strong>Approvals in Teams or Outlook</strong></td><td>CIO</td><td>Proposed enhancement. Uses standard Power Automate approvals; licensing to confirm.</td></tr>
     <tr><td><strong>Move this package to internal hosting</strong></td><td>CIO</td><td>This site is a temporary draft on a public page.</td></tr>
     </tbody></table></div>
-
-    <h3>Build options and timeline</h3>
-    <p>Target: the IT pilot and the purchasing module in about 90 days.</p>
-    <div class="tablewrap"><table>
-    <thead><tr><th></th><th>1. Eric builds</th><th>2. Eric builds with consultant support</th><th>3. Consultant builds</th></tr></thead>
-    <tbody>
-    <tr><td><strong>Eric’s hours</strong></td><td>About 210</td><td>About 170</td><td>About 50</td></tr>
-    <tr><td><strong>Consultant hours</strong></td><td>None</td><td>50</td><td>120 to 150</td></tr>
-    <tr><td><strong>Outside cost</strong></td><td>$0</td><td>$7,500</td><td>$18,000 to $22,500</td></tr>
-    <tr><td><strong>IT pilot live</strong></td><td>Mid-January 2027</td><td>Early January 2027</td><td>Early December 2026</td></tr>
-    <tr><td><strong>Purchasing module ready</strong></td><td>Mid-February 2027</td><td>Early February 2027</td><td>Mid-January 2027</td></tr>
-    <tr><td><strong>District keeps the skills</strong></td><td>Fully</td><td>Fully</td><td>No</td></tr>
-    </tbody></table></div>
-    <div class="callout"><p class="label">WHAT 90 DAYS REQUIRES</p>
-    <ul>
-    <li><strong>Lean scope.</strong> Evaluators score bids in a SharePoint list rather than a custom app. The dashboard and the employee My requests view stay in a later phase.</li>
-    <li><strong>Slow approvals start in week 1.</strong> The Information Security review of guest access and the first meeting with Purchasing.</li>
-    <li><strong>About 3.5 hours a day from Eric</strong> during build stretches. At 3 hours a day, add about two weeks.</li>
-    </ul>
-    <p class="label" style="margin-top:12px">ASSUMPTIONS</p>
-    <ul>
-    <li>Work starts the week of November 9, Forms Center first, then the purchasing module.</li>
-    <li>Consultant support in Option 2 goes to design review, the sealed library and permission flows, and a final security review.</li>
-    <li>The consultant works about 20 hours a week at $150 an hour.</li>
-    <li>Allows for Thanksgiving, the winter break, and MLK Day.</li>
-    <li>If Purchasing chooses MITN, the purchasing module is replaced by about 3 to 4 weeks of onboarding.</li>
-    </ul>
-    <p><strong>What can still slip:</strong> the Information Security review, the winter break, and Purchasing having a suitable RFP to pilot. Extra hours don’t shorten these.</p></div>
 
     <h3>Notes for reviewers</h3>
     <div class="callout"><p class="label">INFORMATION SECURITY</p>
@@ -329,7 +300,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--sky); outline-of
 
     <h3>What changed</h3>
     <ul>
-    <li><strong>November 3, 2026:</strong> Set a 90-day build target with lean scope. Added the Decision Brief, the Purchasing Module brief, this page, the guided prototype tour with phase labels, and the request tracking concept. Updated the plan for fillable PDF conversion and the MITN option.</li>
+    <li><strong>November 3, 2026:</strong> Added the Decision Brief, the Purchasing Module brief, this page, the guided prototype tour with phase labels, and the request tracking concept. Updated the plan for fillable PDF conversion and the MITN option.</li>
     <li><strong>October 27, 2026:</strong> First draft of the briefing package.</li>
     </ul>
   </div>
@@ -695,7 +666,7 @@ schedule.</p>
     <div class="demo-wrap"><iframe id="protoFrame" src="prototype.html#/tour" title="WCCCD Forms Center prototype" loading="lazy"></iframe></div>
     <p class="illus" style="margin-top:10px">The live portal would be built in SharePoint as described in the Design and Build Guide. The prototype shows the experience, not the build.</p>
   </div>
-  <p class="nextlink"><a href="#status">Next: Decisions and Timeline →</a></p>
+  <p class="nextlink"><a href="#status">Next: Decisions →</a></p>
 </section>
 
 <section class="panel" id="guide" aria-label="Design and Build Guide">
